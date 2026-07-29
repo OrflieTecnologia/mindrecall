@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mind Recall — Formação em Hipnose Clínica</title>
+<meta name="description" content="Aprenda a tratar medo, dor e ansiedade com hipnose. Quatro aulas online ao vivo e dois dias de prática presencial. São Paulo, Salvador, Florianópolis e Curitiba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#04101F;
+  --navy:#0B1B33;
+  --navy-raised:#16294A;
+  --gold:#C9A227;
+  --gold-light:#F0D98C;
+  --steel:#A8AEB8;
+  --paper:#F5F3ED;
+
+  --f-display:'Cinzel',Georgia,serif;
+  --f-serif:'Spectral',Georgia,serif;
+  --f-sans:'IBM Plex Sans',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+
+  --wrap:1120px;
+  --gut:clamp(1.25rem,5vw,3rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--navy);color:var(--paper);
+  font-family:var(--f-sans);font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.narrow{max-width:760px}
+
+/* ---------- typography ---------- */
+.eyebrow{
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 1.25rem;
+  display:flex;align-items:center;gap:.85rem;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(201,162,39,.5),transparent)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+.h-display{font-family:var(--f-display);font-weight:600;text-transform:uppercase;letter-spacing:.015em;line-height:1.08}
+.h-serif{
+  font-family:var(--f-serif);font-weight:400;line-height:1.2;
+  font-size:clamp(1.7rem,3.5vw,2.75rem);letter-spacing:-.01em;
+}
+.lead{
+  font-family:var(--f-serif);font-weight:300;
+  font-size:clamp(1.08rem,1.9vw,1.3rem);line-height:1.6;color:#DCD9D0;
+}
+p{margin:0 0 1.1rem}
+.muted{color:var(--steel)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:rgba(11,27,51,.9);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,162,39,.2);
+}
+.nav-in{
+  max-width:var(--wrap);margin:0 auto;padding:.8rem var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.wordmark{text-decoration:none;line-height:1.1}
+.wordmark b{display:block;font-family:var(--f-display);font-weight:600;font-size:1rem;letter-spacing:.14em;color:var(--gold-light)}
+.wordmark span{display:block;font-family:var(--f-mono);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:2px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--f-sans);font-weight:600;font-size:.94rem;
+  padding:.85rem 1.6rem;border-radius:2px;text-decoration:none;
+  border:1px solid transparent;cursor:pointer;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-gold{background:var(--gold);color:#14130A}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-ghost{border-color:rgba(201,162,39,.45);color:var(--gold-light)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(201,162,39,.1)}
+.btn-sm{padding:.58rem 1.1rem;font-size:.84rem}
+.btn-lg{padding:1.05rem 2.2rem;font-size:1.02rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.85rem}
+.hero .cta-row{justify-content:center}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--gold-light);outline-offset:3px;
+}
+
+/* faixa de CTA repetida */
+.cta-band{
+  border-top:1px solid rgba(201,162,39,.28);
+  border-bottom:1px solid rgba(201,162,39,.28);
+  background:rgba(201,162,39,.06);
+  padding:clamp(1.5rem,3vw,2rem);margin-top:clamp(2.5rem,5vw,3.5rem);
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem;
+}
+.cta-band p{margin:0;font-family:var(--f-serif);font-size:clamp(1.05rem,2vw,1.28rem);color:var(--paper)}
+.cta-band small{display:block;font-family:var(--f-sans);font-size:.84rem;color:var(--steel);margin-top:.3rem}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(4rem,8vw,6.5rem)}
+.sec-abyss{background:var(--abyss)}
+.sec-raised{background:var(--navy-raised)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;text-align:center;
+  padding-block:clamp(2.75rem,6vw,4.5rem) clamp(3.5rem,7vw,5rem);
+  background:radial-gradient(120% 90% at 50% -10%,#12244180 0%,transparent 60%),var(--navy);
+}
+.seal{
+  width:clamp(96px,14vw,132px);aspect-ratio:1;margin:0 auto clamp(1.5rem,3vw,2.25rem);
+  border-radius:50%;
+  background-image:url('assets/logo-navy.png');
+  background-size:267%;background-position:50% 39%;
+  -webkit-mask-image:radial-gradient(circle,#000 58%,transparent 76%);
+  mask-image:radial-gradient(circle,#000 58%,transparent 76%);
+}
+.hero .eyebrow{justify-content:center}
+.hero .eyebrow::after{display:none}
+.hero .eyebrow::before{content:"";flex:0 0 34px;height:1px;background:rgba(201,162,39,.6)}
+.hero h1{font-size:clamp(1.95rem,6vw,4.1rem);margin-bottom:1.5rem}
+.hero h1 .line{display:block}
+.hero h1 .accent{color:var(--gold)}
+.hero .lead{max-width:620px;margin:0 auto 2.1rem}
+
+.promise{
+  max-width:640px;margin:0 auto 2.2rem;
+  border-top:1px solid rgba(201,162,39,.32);border-bottom:1px solid rgba(201,162,39,.32);
+  padding:1.4rem 1.25rem;
+  font-family:var(--f-serif);font-size:clamp(1.12rem,2.2vw,1.42rem);line-height:1.5;
+}
+.promise em{font-style:normal;color:var(--gold-light)}
+
+.factrail{
+  margin-top:clamp(2.75rem,5vw,4rem);border-top:1px solid rgba(255,255,255,.1);
+  padding-top:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+}
+.factrail div{text-align:center}
+.factrail b{display:block;font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,3vw,1.85rem);color:var(--gold-light);line-height:1}
+.factrail span{display:block;margin-top:.5rem;font-family:var(--f-mono);font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+
+/* ---------- tese ---------- */
+.negation{
+  font-family:var(--f-serif);font-style:italic;font-weight:300;
+  font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--steel);
+  border-left:2px solid var(--gold);padding-left:1.4rem;margin:0 0 2rem;
+}
+
+/* ---------- método ---------- */
+.method{background:linear-gradient(180deg,var(--navy-raised) 0%,var(--navy) 42%,var(--abyss) 100%)}
+.stages{margin-top:clamp(2.5rem,5vw,3.5rem)}
+.stage{
+  position:relative;padding:0 0 clamp(2rem,4vw,3rem) clamp(2.25rem,5vw,3.5rem);
+  border-left:1px solid rgba(201,162,39,.28);
+}
+.stage:last-child{border-left-color:transparent;padding-bottom:0}
+.stage::before{
+  content:"";position:absolute;left:-4.5px;top:.6rem;width:8px;height:8px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 0 4px var(--navy);
+}
+.stage:last-child::before{
+  width:12px;height:12px;left:-6.5px;background:var(--gold-light);
+  box-shadow:0 0 0 5px var(--abyss),0 0 22px rgba(240,217,140,.55);
+}
+.stage-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.55rem 1rem;margin-bottom:.65rem}
+.stage-num{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)}
+.stage-name{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:clamp(.98rem,2.1vw,1.28rem);letter-spacing:.04em}
+.tag{
+  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid rgba(168,174,184,.4);color:var(--steel);padding:.24rem .55rem;border-radius:2px;white-space:nowrap;
+}
+.tag-live{border-color:rgba(201,162,39,.55);color:var(--gold-light)}
+.stage p{margin:0;color:#CFCCC4;max-width:60ch}
+.stage-who{display:block;margin-top:.6rem;font-family:var(--f-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+
+/* ---------- cards ---------- */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2.5vw,1.75rem);margin-top:2.5rem}
+.card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:3px;padding:clamp(1.4rem,2.6vw,1.9rem)}
+.card h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:1rem;letter-spacing:.05em;color:var(--gold-light);margin-bottom:.5rem}
+.card p:last-child{margin-bottom:0}
+
+/* ---------- professores ---------- */
+.teacher{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.teacher-photo{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
+.teacher-body{padding:clamp(1.3rem,2.5vw,1.75rem)}
+.teacher-body h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:1.02rem;letter-spacing:.05em;color:var(--gold-light);margin-bottom:.35rem}
+.teacher-role{font-family:var(--f-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin:0 0 1rem}
+.creds{list-style:none;margin:1.1rem 0 0;padding:0;border-top:1px solid rgba(255,255,255,.1)}
+.creds li{position:relative;padding:.55rem 0 .55rem 1.15rem;font-size:.88rem;color:#CFCCC4;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5}
+.creds li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+
+/* ---------- fotos / galeria ---------- */
+.figure{border:1px solid rgba(201,162,39,.3);border-radius:3px;overflow:hidden;background:var(--abyss)}
+.figure img{width:100%;height:100%;object-fit:cover}
+.figure figcaption{padding:.8rem 1rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);border-top:1px solid rgba(255,255,255,.1)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.75rem,2vw,1.25rem);margin-top:2.5rem}
+.gallery .figure img{aspect-ratio:3/4}
+
+/* ---------- depoimentos em vídeo ---------- */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.85rem,2vw,1.5rem);margin-top:2.5rem}
+.vcard{border:1px solid rgba(201,162,39,.3);border-radius:3px;overflow:hidden;background:var(--abyss);margin:0}
+.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.vcard figcaption{padding:.85rem 1rem;border-top:1px solid rgba(255,255,255,.1)}
+.vcard b{display:block;font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:.86rem;letter-spacing:.05em;color:var(--gold-light)}
+.vcard span{display:block;margin-top:.25rem;font-family:var(--f-mono);font-size:.61rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+
+/* ---------- a conta ---------- */
+.ledger{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
+.ledger-row{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ledger-row dt{color:#CFCCC4;margin:0}
+.ledger-row dd{margin:0;font-family:var(--f-mono);font-size:clamp(1rem,2.2vw,1.25rem);color:var(--gold-light);white-space:nowrap}
+.ledger-row.total dt{color:var(--paper);font-weight:600}
+.ledger-row.total dd{color:var(--gold);font-size:clamp(1.15rem,2.6vw,1.45rem)}
+.disclaimer{margin-top:1.5rem;font-size:.82rem;line-height:1.6;color:var(--steel)}
+
+/* ---------- filtro ---------- */
+.filter-item{padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:auto 1fr;gap:1.3rem;align-items:start}
+.filter-item:last-child{border-bottom:none}
+.filter-x{font-family:var(--f-mono);color:var(--gold);font-size:1.1rem;line-height:1.6}
+.filter-item h3{font-family:var(--f-serif);font-size:1.18rem;font-weight:600;margin-bottom:.35rem}
+.filter-item p{margin:0;color:#CFCCC4}
+
+/* ---------- capitais ---------- */
+.cities{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:2.5rem;background:rgba(255,255,255,.12)}
+.city{background:var(--navy);padding:1.4rem 1.2rem}
+.city b{display:block;font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:.98rem;letter-spacing:.05em;color:var(--gold-light)}
+.city span{display:block;margin-top:.4rem;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+
+/* ---------- tudo que está incluso ---------- */
+.includes{border:1px solid rgba(201,162,39,.4);border-radius:4px;overflow:hidden;margin-top:clamp(2.5rem,5vw,3.25rem)}
+.inc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:rgba(201,162,39,.16)}
+.inc{background:var(--navy);padding:1.35rem clamp(1.1rem,2.5vw,1.6rem);display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start}
+.inc-check{color:var(--gold);font-family:var(--f-mono);font-size:.95rem;line-height:1.55}
+.inc b{display:block;font-weight:600;font-size:.98rem;color:var(--paper);line-height:1.45}
+.inc span{display:block;margin-top:.2rem;font-size:.87rem;color:var(--steel);line-height:1.5}
+
+.price-panel{background:rgba(201,162,39,.09);border-top:1px solid rgba(201,162,39,.4);padding:clamp(1.75rem,4vw,2.75rem);text-align:center}
+.price-kicker{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin:0 0 .6rem}
+.price-big{font-family:var(--f-display);font-weight:600;font-size:clamp(2.6rem,9vw,4.2rem);color:var(--gold);line-height:1;letter-spacing:.01em}
+.price-sub{margin:.9rem 0 0;font-family:var(--f-serif);font-size:clamp(1.02rem,2vw,1.2rem);color:var(--paper)}
+.price-math{
+  margin:1.5rem auto 0;max-width:460px;padding-top:1.25rem;
+  border-top:1px solid rgba(201,162,39,.3);font-size:.92rem;color:var(--steel);line-height:1.6;
+}
+.price-panel .btn{margin-top:1.75rem}
+
+/* ---------- form ---------- */
+.form-shell{margin-top:2.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.28);border-radius:3px;padding:clamp(1.5rem,3.5vw,2.5rem)}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-family:var(--f-mono);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:.5rem}
+.field input,.field select,.field textarea{
+  width:100%;background:var(--abyss);color:var(--paper);
+  border:1px solid rgba(255,255,255,.16);border-radius:2px;
+  padding:.8rem .9rem;font-family:var(--f-sans);font-size:.98rem;
+}
+.field input::placeholder,.field textarea::placeholder{color:#6C7788}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.form-note{font-size:.78rem;color:var(--steel);margin:1.1rem 0 0;line-height:1.6}
+
+/* ---------- faq ---------- */
+.faq{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
+.faq details{border-bottom:1px solid rgba(255,255,255,.12)}
+.faq summary{cursor:pointer;list-style:none;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--f-serif);font-size:clamp(1.02rem,2vw,1.15rem)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.4rem;top:1.1rem;font-family:var(--f-mono);color:var(--gold);font-size:1.15rem;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq-body{padding:0 2.5rem 1.35rem 0;color:#CFCCC4}
+.faq-body p:last-child{margin-bottom:0}
+
+/* ---------- pendências ---------- */
+.pending{
+  border:1px dashed rgba(201,162,39,.5);background:rgba(201,162,39,.05);
+  border-radius:3px;padding:1rem 1.15rem;
+  font-family:var(--f-mono);font-size:.72rem;line-height:1.6;letter-spacing:.03em;color:var(--gold-light);
+}
+
+/* ---------- footer ---------- */
+.foot{background:var(--abyss);border-top:1px solid rgba(201,162,39,.22);padding-block:3rem 2.5rem}
+.foot-in{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
+.foot small{display:block;font-size:.78rem;color:var(--steel);line-height:1.7}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(18px)}
+.rise.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.hero h1 .line{opacity:0;transform:translateY(14px);animation:heroline .75s cubic-bezier(.2,.7,.3,1) forwards}
+.hero h1 .line:nth-child(2){animation-delay:.3s}
+@keyframes heroline{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise,.hero h1 .line{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .cities{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .grid-2{grid-template-columns:1fr}
+  .factrail{grid-template-columns:repeat(2,1fr);gap:1.5rem 1rem}
+  .field-row{grid-template-columns:1fr}
+  .nav .btn{display:none}
+  .ledger-row{flex-direction:column;gap:.3rem}
+  .filter-item{grid-template-columns:1fr;gap:.5rem}
+  .inc-list{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .videos{grid-template-columns:1fr;max-width:340px;margin-inline:auto}
+  .cta-band{flex-direction:column;align-items:stretch;text-align:center}
+  .cta-band .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="#topo">
+      <b>MIND RECALL</b>
+      <span>Método, ciência e transformação</span>
+    </a>
+    <a class="btn btn-gold btn-sm" href="#inscricao">Garantir minha vaga</a>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <div class="seal" role="img" aria-label="Marca da Mind Recall"></div>
+    <p class="eyebrow">Formação em hipnose clínica</p>
+    <h1 class="h-display">
+      <span class="line">Aprenda a tratar</span>
+      <span class="line accent">medo, dor e ansiedade.</span>
+    </h1>
+    <p class="lead">
+      Hipnose clínica é terapia. Ela trata fobia, dor crônica, ansiedade, compulsão e vícios.
+      Em muitos casos, em poucas sessões. Você pode aprender a fazer isso.
+    </p>
+
+    <p class="promise">
+      Atenda seu primeiro paciente em <em>30 dias</em>.<br>
+      Sem faculdade de psicologia. Sem largar o que você já faz.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-gold btn-lg" href="#inscricao">Garantir minha vaga</a>
+      <a class="btn btn-ghost btn-lg" href="#incluso">Ver tudo que está incluso</a>
+    </div>
+
+    <div class="factrail">
+      <div><b>20</b><span>turmas formadas</span></div>
+      <div><b>4</b><span>capitais</span></div>
+      <div><b>6</b><span>encontros</span></div>
+      <div><b>2024</b><span>primeira turma</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= O QUE É HIPNOSE ================= -->
+<section class="sec-abyss">
+  <div class="wrap narrow rise">
+    <p class="eyebrow">Antes de tudo</p>
+    <h2 class="h-serif">Hipnose não é o que passa na TV.</h2>
+    <p style="margin-top:1.5rem">
+      Ninguém dorme. Ninguém perde o controle. Ninguém faz o que não quer fazer.
+    </p>
+    <p>
+      Hipnose é atenção concentrada. É o mesmo estado de quando você lê um livro bom
+      e não escuta quem te chama. Nesse estado, a mente aceita mudanças com mais facilidade.
+      É por isso que a técnica funciona para medo, dor e ansiedade.
+    </p>
+    <p>
+      O nome atrapalha um pouco. Quem batizou a técnica no século XIX achou que era sono.
+      Escolheu Hypnos, o deus grego do sono. Errou — mas o nome pegou e ficou.
+    </p>
+    <p class="muted" style="margin-bottom:0">
+      Hoje a hipnose é reconhecida pela APA, a associação americana de psicologia,
+      como ferramenta clínica válida. É usada no controle de dor, em odontologia e no tratamento de fobias.
+    </p>
+  </div>
+</section>
+
+<!-- ================= TESE ================= -->
+<section>
+  <div class="wrap narrow rise">
+    <p class="eyebrow">A diferença</p>
+    <p class="negation">Isto não é mais um curso gravado de R$ 500 com certificado em PDF.</p>
+    <h2 class="h-serif">O problema não é a hipnose.<br>É o jeito que ensinam.</h2>
+    <p style="margin-top:1.5rem">
+      Quase todo curso de hipnose é vídeo gravado. Você assiste em casa, recebe um certificado
+      e nunca hipnotiza ninguém. O diploma fica na gaveta.
+    </p>
+    <p>
+      Faltou a única coisa que importa no consultório: ter feito, com uma pessoa de verdade,
+      com um professor olhando.
+    </p>
+    <p>
+      Aqui é diferente. A teoria é ao vivo, e você pode perguntar na hora. A prática é presencial,
+      e não existe versão gravada dela.
+    </p>
+    <p style="margin-bottom:0">
+      E quem ensina, atende. É regra da escola: todo professor tem consultório ativo.
+    </p>
+  </div>
+</section>
+
+<!-- ================= MÉTODO ================= -->
+<section class="method" id="metodo">
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">Como funciona</p>
+      <h2 class="h-serif">Seis encontros. Da teoria ao consultório.</h2>
+      <p class="lead" style="margin-top:1.3rem">
+        Quatro aulas online ao vivo, às terças e quintas. Depois, dois dias de prática presencial.
+        A ordem é pensada: primeiro você entende, depois você faz.
+      </p>
+    </div>
+
+    <div class="stages">
+      <div class="stage rise">
+        <div class="stage-head">
+          <span class="stage-num">01</span>
+          <h3 class="stage-name">A mente por dentro</h3>
+          <span class="tag tag-live">Online · ao vivo</span>
+        </div>
+        <p>
+          O que acontece no cérebro quando a atenção se concentra. É a base científica da técnica.
+          É também a resposta que você vai dar toda vez que alguém perguntar se hipnose funciona mesmo.
+        </p>
+        <span class="stage-who">Dr. William Silvestre</span>
+      </div>
+
+      <div class="stage rise">
+        <div class="stage-head">
+          <span class="stage-num">02</span>
+          <h3 class="stage-name">A história real</h3>
+          <span class="tag tag-live">Online · ao vivo</span>
+        </div>
+        <p>
+          De onde a hipnose veio e como ela virou tema de programa de TV.
+          Você vai conhecer os usos que o Brasil ainda desconhece e a Europa trata como rotina.
+        </p>
+        <span class="stage-who">Israel Costa</span>
+      </div>
+
+      <div class="stage rise">
+        <div class="stage-head">
+          <span class="stage-num">03</span>
+          <h3 class="stage-name">O que a hipnose trata</h3>
+          <span class="tag tag-live">Online · ao vivo</span>
+        </div>
+        <p>
+          Fobia, dor crônica, ansiedade, vícios e compulsão. Você vai aprender o que a técnica resolve,
+          o que ela não resolve, e quando ela entra junto com outro tratamento.
+        </p>
+        <span class="stage-who">Dr. William Silvestre</span>
+      </div>
+
+      <div class="stage rise">
+        <div class="stage-head">
+          <span class="stage-num">04</span>
+          <h3 class="stage-name">A engenharia da hipnose</h3>
+          <span class="tag tag-live">Online · ao vivo</span>
+        </div>
+        <p>
+          A sessão inteira, do começo ao fim: como criar confiança, como induzir,
+          como aplicar as sugestões e como trazer a pessoa de volta.
+        </p>
+        <span class="stage-who">Israel Costa</span>
+      </div>
+
+      <div class="stage rise">
+        <div class="stage-head">
+          <span class="stage-num">05—06</span>
+          <h3 class="stage-name">A prática de verdade</h3>
+          <span class="tag">Presencial · 2 dias · 9h às 17h30</span>
+        </div>
+        <p>
+          Você hipnotiza. E é hipnotizado. São dois dias de prática com âncoras, scripts de tratamento
+          e regressão, com os professores e monitores acompanhando na sala.
+          É aqui que a formação deixa de ser teoria. E é por isso que não existe versão gravada.
+        </p>
+        <span class="stage-who">Israel Costa e Dr. William · na sua capital</span>
+      </div>
+    </div>
+
+    <div class="cta-band rise">
+      <p>
+        Faltam poucas etapas até o seu primeiro atendimento.
+        <small>Fale com a escola e veja a data da próxima turma na sua cidade.</small>
+      </p>
+      <a class="btn btn-gold" href="#inscricao">Quero me inscrever</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUEM ENSINA ================= -->
+<section>
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">Quem ensina</p>
+      <h2 class="h-serif">Você não vai aprender com quem só dá aula.</h2>
+      <p style="margin-top:1.3rem">
+        Os dois fundadores da escola dão aula pessoalmente. Um traz a ciência.
+        O outro traz o consultório. Juntos, eles cobrem a formação inteira.
+      </p>
+    </div>
+
+    <div class="grid-2 rise">
+      <article class="teacher">
+        <img class="teacher-photo" src="assets/dr-william.jpg" alt="Dr. William Silvestre, fundador e presidente da Mind Recall" loading="lazy">
+        <div class="teacher-body">
+          <h3>Dr. William Silvestre</h3>
+          <p class="teacher-role">Fundador e presidente</p>
+          <p class="muted" style="margin-bottom:0">
+            São 27 anos dando aula na área da saúde. Ele é quem ancora o método na fisiologia
+            e na neurologia — a parte que garante que você vai atender com segurança técnica.
+          </p>
+          <ul class="creds">
+            <li>Mestre em Bioquímica e Farmacêutico-Bioquímico</li>
+            <li>Professor de Farmacologia e Fisiologia na Medicina da UNINOVE</li>
+            <li>27 anos de docência universitária na área da saúde</li>
+            <li>Especialista em Toxicologia e em Psicotrópicos</li>
+            <li>Diretor licenciado do Departamento de Ciências da Saúde da UNINOVE</li>
+            <li>Coordenador licenciado do curso de Farmácia e Bioquímica da UNINOVE</li>
+            <li>Diretor licenciado do Hospital de Monte Verde (MG)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="teacher">
+        <img class="teacher-photo" src="assets/israel-costa.jpg" alt="Israel Costa, diretor geral e professor da Mind Recall" loading="lazy" style="object-position:48% 20%">
+        <div class="teacher-body">
+          <h3>Israel Costa</h3>
+          <p class="teacher-role">Diretor geral e professor</p>
+          <p class="muted" style="margin-bottom:0">
+            Criador do método Fast Reset. Atende online a partir do Brasil e tem pacientes
+            em quatro continentes. É quem ensina a parte prática: a sessão, a linguagem e a condução do caso.
+          </p>
+          <ul class="creds">
+            <li>Criador da metodologia Fast Reset</li>
+            <li>Psicanálise clínica</li>
+            <li>Neurociência aplicada e PNL (Master Practitioner)</li>
+            <li>Hipnose clínica, conversacional e ericksoniana</li>
+            <li>Terapia Cognitivo-Comportamental (TCC)</li>
+            <li>Terapia de casais e relações</li>
+            <li>Atende alunos e pacientes em 4 continentes</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROVA ================= -->
+<section class="sec-raised">
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">A prova</p>
+      <h2 class="h-serif">Vinte turmas antes da sua.</h2>
+      <p style="margin-top:1.3rem">
+        A escola não começou agora. Desde 2024 já foram doze turmas em São Paulo, quatro em Salvador,
+        três em Florianópolis e a primeira em Curitiba.
+      </p>
+      <p style="margin-bottom:0">
+        E a regra é não abandonar cidade. Onde a Mind Recall abre turma, ela volta.
+      </p>
+    </div>
+
+    <figure class="figure rise" style="margin:2.5rem 0 0">
+      <img src="assets/turma-formatura.jpg" alt="Alunos da turma 003 de Florianópolis comemorando com o certificado de conclusão" loading="lazy" style="aspect-ratio:16/9">
+      <figcaption>Fim da turma 003 · Florianópolis · certificado na mão</figcaption>
+    </figure>
+
+    <div class="gallery rise">
+      <figure class="figure">
+        <img src="assets/aula-presencial.jpg" alt="Aula presencial da Mind Recall em andamento, com Israel Costa à frente da turma" loading="lazy" style="object-position:50% 30%">
+        <figcaption>A aula presencial, por dentro</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="assets/turma-floripa.jpg" alt="Dr. William Silvestre com os alunos da turma de Florianópolis" loading="lazy" style="object-position:50% 45%">
+        <figcaption>Dr. William com a turma</figcaption>
+      </figure>
+    </div>
+
+    <div class="rise" style="margin-top:clamp(2.5rem,5vw,3.5rem);border-top:1px solid rgba(255,255,255,.14);padding-top:clamp(2.5rem,5vw,3.5rem)">
+      <div class="narrow">
+        <p class="eyebrow">HipnoCare</p>
+        <h2 class="h-serif">O dia em que a escola não ganha nada.</h2>
+        <p style="margin-top:1.3rem">
+          O HipnoCare é uma ação social. A escola fecha parceria com uma entidade, chama os alunos
+          e passa o dia inteiro atendendo a comunidade de graça. Ninguém cobra nada. Nem a escola, nem o aluno.
+        </p>
+        <p style="margin-bottom:0">
+          Para você, é o primeiro atendimento fora da sala de aula. A primeira edição foi na Faria Lima,
+          a segunda em Embu das Artes. A terceira já está sendo preparada em São Paulo.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="figure">
+          <img src="assets/hipnocare-1.jpg" alt="Voluntários da Mind Recall no dia do HipnoCare" loading="lazy">
+          <figcaption>HipnoCare · 1ª edição</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="assets/hipnocare-2.jpg" alt="Aluna voluntária no dia de atendimento gratuito do HipnoCare" loading="lazy">
+          <figcaption>Alunos voluntários no dia</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS EM VÍDEO ================= -->
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">Quem já fez</p>
+      <h2 class="h-serif">Três alunos contando como foi.</h2>
+      <p style="margin-top:1.3rem">
+        São vídeos gravados pelos próprios alunos, no celular deles. Sem estúdio e sem produção.
+        Cada um leva mais ou menos um minuto.
+      </p>
+    </div>
+
+    <div class="videos rise">
+      <figure class="vcard">
+        <video controls playsinline preload="none" poster="assets/videos/aline.jpg"
+               aria-label="Depoimento em vídeo da aluna Aline">
+          <source src="assets/videos/aline.mp4" type="video/mp4">
+          Seu navegador não consegue exibir este vídeo.
+        </video>
+        <figcaption>
+          <b>Aline</b>
+          <span>Aluna · 1min01</span>
+        </figcaption>
+      </figure>
+
+      <figure class="vcard">
+        <video controls playsinline preload="none" poster="assets/videos/jose-luis.jpg"
+               aria-label="Depoimento em vídeo do aluno José Luis">
+          <source src="assets/videos/jose-luis.mp4" type="video/mp4">
+          Seu navegador não consegue exibir este vídeo.
+        </video>
+        <figcaption>
+          <b>José Luis</b>
+          <span>Aluno · 58s</span>
+        </figcaption>
+      </figure>
+
+      <figure class="vcard">
+        <video controls playsinline preload="none" poster="assets/videos/viviane.jpg"
+               aria-label="Depoimento em vídeo da aluna Viviane">
+          <source src="assets/videos/viviane.mp4" type="video/mp4">
+          Seu navegador não consegue exibir este vídeo.
+        </video>
+        <figcaption>
+          <b>Viviane</b>
+          <span>Aluna · 52s</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="cta-band rise">
+      <p>
+        A próxima turma pode ser a sua.
+        <small>Fale com a escola e veja a data na sua capital.</small>
+      </p>
+      <a class="btn btn-gold" href="#inscricao">Garantir minha vaga</a>
+    </div>
+
+    <div class="pending rise" style="margin-top:1.5rem">
+      [CONFIRMAR COM O CLIENTE — 2 pontos: (1) profissão e cidade de cada um (hoje só temos o
+      primeiro nome; "Aline, dentista, Salvador" converte muito mais que "Aline"). (2) autorização
+      de uso de imagem dos três para peça pública. RECOMENDAÇÃO: legenda queimada no vídeo —
+      tráfego de rede social assiste sem som, e sem legenda o depoimento não comunica nada.]
+    </div>
+  </div>
+</section>
+
+<!-- ================= A CONTA ================= -->
+<section>
+  <div class="wrap narrow rise">
+    <p class="eyebrow">A conta</p>
+    <h2 class="h-serif">A conta que quase ninguém faz antes de decidir.</h2>
+    <p class="lead" style="margin-top:1.3rem">
+      Nesta profissão, o retorno não depende de anos de carreira.
+      Depende de você marcar a primeira sessão.
+    </p>
+
+    <dl class="ledger">
+      <div class="ledger-row">
+        <dt>Uma sessão de hipnoterapeuta iniciante</dt>
+        <dd>R$ 200 a R$ 400</dd>
+      </div>
+      <div class="ledger-row">
+        <dt>Uma sessão de terapeuta experiente (valor do Israel hoje)</dt>
+        <dd>R$ 500</dd>
+      </div>
+      <div class="ledger-row">
+        <dt>A formação completa</dt>
+        <dd>R$ 1.500</dd>
+      </div>
+      <div class="ledger-row total">
+        <dt>Sessões para pagar a formação</dt>
+        <dd>4 a 8</dd>
+      </div>
+    </dl>
+
+    <p class="disclaimer">
+      Esses são valores praticados no mercado, informados pelos professores da escola.
+      Não são promessa de resultado. Quanto você vai cobrar depende da sua cidade, do seu consultório
+      e da sua dedicação. A escola não divulga faturamento médio de aluno porque considera esse número,
+      do jeito que o mercado costuma apresentar, impossível de verificar.
+    </p>
+
+    <div class="cta-band">
+      <p>
+        Quer saber a data da próxima turma?
+        <small>A conversa é rápida e não compromete nada.</small>
+      </p>
+      <a class="btn btn-gold" href="#inscricao">Garantir minha vaga</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FILTRO ================= -->
+<section class="sec-abyss">
+  <div class="wrap narrow rise">
+    <p class="eyebrow">O filtro</p>
+    <h2 class="h-serif">Três pessoas que não deveriam se inscrever.</h2>
+    <p style="margin-top:1.3rem;margin-bottom:1.75rem">
+      A turma presencial tem lugar limitado e a prática exige presença.
+      Preferimos dizer isso agora do que devolver dinheiro depois.
+    </p>
+
+    <div class="filter-item">
+      <span class="filter-x" aria-hidden="true">✕</span>
+      <div>
+        <h3>Quem quer hipnotizar plateia.</h3>
+        <p>A escola forma terapeuta para consultório. Se o seu objetivo é palco, existe gente melhor
+        do que a gente para te ensinar. E a gente vai te dizer isso na conversa.</p>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <span class="filter-x" aria-hidden="true">✕</span>
+      <div>
+        <h3>Quem não pode estar nos dois dias presenciais.</h3>
+        <p>A prática não tem vídeo e não tem reposição. Sem os dois dias não sai certificado.
+        E, sendo honesto, também não sai formação.</p>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <span class="filter-x" aria-hidden="true">✕</span>
+      <div>
+        <h3>Quem só quer mais um certificado.</h3>
+        <p>Se o plano é guardar o diploma e nunca atender ninguém, o curso vai funcionar
+        e o resultado não vem. Hipnose se aprende praticando.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPITAIS ================= -->
+<section>
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">Onde acontece</p>
+      <h2 class="h-serif">A teoria é de qualquer lugar.<br>A prática é na sua capital.</h2>
+      <p style="margin-top:1.3rem">
+        As quatro aulas online juntam alunos do Brasil inteiro.
+        O fim de semana presencial acontece na capital que você escolher.
+      </p>
+    </div>
+    <div class="cities rise">
+      <div class="city"><b>São Paulo</b><span>Próxima turma · [data]</span></div>
+      <div class="city"><b>Salvador</b><span>Próxima turma · [data]</span></div>
+      <div class="city"><b>Florianópolis</b><span>Próxima turma · [data]</span></div>
+      <div class="city"><b>Curitiba</b><span>Próxima turma · [data]</span></div>
+    </div>
+    <div class="pending rise" style="margin-top:1.5rem">
+      [PENDENTE — datas reais das próximas turmas por capital. Sem data confirmada, não usar
+      contagem regressiva nem "últimas vagas": urgência falsa queima a autoridade da página.]
+    </div>
+  </div>
+</section>
+
+<!-- ================= TUDO QUE ESTÁ INCLUSO ================= -->
+<section class="sec-raised" id="incluso">
+  <div class="wrap">
+    <div class="narrow rise">
+      <p class="eyebrow">O que você leva</p>
+      <h2 class="h-serif">Tudo que está incluso na formação.</h2>
+      <p style="margin-top:1.3rem">
+        Um preço, uma formação completa. Sem taxa extra e sem módulo vendido à parte.
+      </p>
+    </div>
+
+    <div class="includes rise">
+      <div class="inc-list">
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>4 aulas online ao vivo</b><span>Você assiste de casa e pergunta na hora. Não é vídeo gravado.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>2 dias de prática presencial</b><span>Das 9h às 17h30, na capital que você escolher.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Prática com gente de verdade</b><span>Você hipnotiza e é hipnotizado, com professor na sala.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Scripts de tratamento prontos</b><span>Para os casos que mais chegam no consultório.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Técnica de regressão</b><span>Você sai da formação sabendo aplicar.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Implantação de âncoras</b><span>A base de boa parte do trabalho clínico.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Certificado em hipnose clínica</b><span>Entregue quando você termina os dois dias presenciais.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Grupo de alunos da escola</b><span>Todo mundo que já fez a formação está lá dentro.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Convite para o HipnoCare</b><span>O dia de atendimento voluntário. Seu primeiro paciente fora da sala.</span></div>
+        </div>
+        <div class="inc">
+          <span class="inc-check" aria-hidden="true">✓</span>
+          <div><b>Curso de docência, de graça</b><span>Aberto aos alunos. Quem se destaca pode ser convidado a dar aula. Não é promessa de vaga.</span></div>
+        </div>
+      </div>
+
+      <div class="price-panel">
+        <p class="price-kicker">Tudo isso por</p>
+        <div class="price-big">R$ 1.500</div>
+        <p class="price-sub">Dá para parcelar.</p>
+        <p class="price-math">
+          Um hipnoterapeuta iniciante cobra de R$ 200 a R$ 400 por sessão.<br>
+          <strong style="color:var(--gold-light)">Entre 4 e 8 sessões pagam a sua formação.</strong>
+        </p>
+        <a class="btn btn-gold btn-lg" href="#inscricao">Garantir minha vaga</a>
+      </div>
+    </div>
+
+    <div class="pending rise" style="margin-top:1.5rem">
+      [CONFIRMAR COM O CLIENTE — 2 itens: (1) "refazer as aulas online nas turmas seguintes" foi
+      descrito pelo Israel como prática ("tem aluno que refaz sempre"), mas não como política oficial;
+      ficou fora da lista até virar regra. (2) condições de parcelamento (cartão em até 12x com juros,
+      Pix parcelado via Cacto) — colocar o número exato de parcelas quando a plataforma estiver fechada.]
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMULÁRIO ================= -->
+<section id="inscricao">
+  <div class="wrap narrow rise">
+    <p class="eyebrow">Próximo passo</p>
+    <h2 class="h-serif">Conversar não compromete.</h2>
+    <p style="margin-top:1.3rem">
+      Alguém da escola fala com você para entender seu momento, passar a data da próxima turma
+      na sua capital e explicar como pagar. Se não fizer sentido para você agora, a gente diz isso também.
+    </p>
+
+    <form class="form-shell" novalidate>
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como você se chama" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="whats">WhatsApp com DDD</label>
+          <input id="whats" name="whatsapp" type="tel" autocomplete="tel" placeholder="(11) 90000-0000" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="capital">Capital para o presencial</label>
+          <select id="capital" name="capital" required>
+            <option value="">Selecione…</option>
+            <option>São Paulo</option>
+            <option>Salvador</option>
+            <option>Florianópolis</option>
+            <option>Curitiba</option>
+            <option>Ainda não é atendida</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="atuacao">O que você faz hoje</label>
+          <select id="atuacao" name="atuacao" required>
+            <option value="">Selecione…</option>
+            <option>Terapeuta holístico</option>
+            <option>Psicólogo ou psicanalista</option>
+            <option>Profissional da saúde (dentista, enfermagem, medicina)</option>
+            <option>Outra área, quero mudar de carreira</option>
+            <option>Ainda não atuo com terapia</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="porque">O que te trouxe até aqui (opcional)</label>
+        <textarea id="porque" name="porque" rows="3" placeholder="Uma linha já ajuda a gente a te atender melhor."></textarea>
+      </div>
+
+      <button class="btn btn-gold btn-lg" type="submit" style="width:100%">Quero garantir minha vaga</button>
+
+      <p class="form-note">
+        Seus dados vão para a equipe da Mind Recall e não são passados para mais ninguém.
+      </p>
+    </form>
+
+    <div class="pending" style="margin-top:1.5rem">
+      [PENDENTE — campos finais a fechar com o Rodrigo (tráfego pago) e destino do lead:
+      CRM, planilha ou WhatsApp. O formulário ainda não está ligado a nenhum backend.]
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec-abyss">
+  <div class="wrap narrow rise">
+    <p class="eyebrow">Dúvidas</p>
+    <h2 class="h-serif">O que as pessoas perguntam antes de decidir.</h2>
+
+    <div class="faq">
+      <details>
+        <summary>Preciso ser psicólogo?</summary>
+        <div class="faq-body">
+          <p>Não. A maior parte dos alunos da escola não tem faculdade de psicologia. São terapeutas de
+          várias áreas, profissionais da saúde e gente mudando de carreira. Hipnoterapia não é profissão
+          de nível universitário no Brasil. A formação começa do zero.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Hipnose tem respaldo científico?</summary>
+        <div class="faq-body">
+          <p>Tem. A APA, a associação americana de psicologia, reconhece a hipnose como ferramenta clínica.
+          Ela é usada no controle de dor, em odontologia e no tratamento de fobias. O que confunde as
+          pessoas é a hipnose de palco, que é outra coisa. A primeira aula trata exatamente disso.</p>
+        </div>
+      </details>
+      <details>
+        <summary>E se eu não conseguir hipnotizar ninguém?</summary>
+        <div class="faq-body">
+          <p>Os dois dias presenciais são de prática. Você hipnotiza e é hipnotizado, com os professores
+          e monitores acompanhando na sala. Ninguém termina a formação sem ter conduzido uma sessão
+          do começo ao fim.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Em quanto tempo eu posso começar a atender?</summary>
+        <div class="faq-body">
+          <p>A escola não promete prazo de retorno nem faturamento, porque isso depende de cada aluno.
+          O que ela garante é o seguinte: quando você termina o fim de semana presencial, já está apto
+          a marcar o primeiro atendimento. O que vem depois é trabalho seu.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Quanto custa e como eu pago?</summary>
+        <div class="faq-body">
+          <p>A formação completa custa R$ 1.500. Isso inclui as quatro aulas online ao vivo e os dois dias
+          presenciais. Dá para parcelar. As condições exatas são passadas na conversa, porque mudam
+          conforme a data da turma que você escolher.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Não moro em nenhuma dessas quatro capitais.</summary>
+        <div class="faq-body">
+          <p>As aulas online recebem alunos do Brasil inteiro. O que limita é o fim de semana presencial.
+          A escola está abrindo novas capitais e forma professores locais em cada uma. Vale marcar a
+          conversa e perguntar qual é a próxima. Muitos alunos também vêm de cidades vizinhas.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="cta-band">
+      <p>
+        Ficou alguma dúvida de fora?
+        <small>Fala com a gente. A conversa é rápida e não compromete nada.</small>
+      </p>
+      <a class="btn btn-gold" href="#inscricao">Quero me inscrever</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="wordmark" href="#topo">
+        <b>MIND RECALL</b>
+        <span>Método, ciência e transformação</span>
+      </a>
+      <small style="margin-top:1rem">Escola de hipnose clínica · Formação profissionalizante</small>
+    </div>
+    <div>
+      <small>São Paulo · Salvador · Florianópolis · Curitiba</small>
+      <small style="margin-top:.4rem">© 2026 Mind Recall. Todos os direitos reservados.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rise');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach(function(el){ io.observe(el); });
+})();
+
+/* Versão de revisão: o formulário ainda não tem destino.
+   Sem isto o envio falharia em silêncio e o lead sumiria.
+   REMOVER este bloco quando o backend/WhatsApp estiver ligado. */
+(function(){
+  var form = document.querySelector('.form-shell');
+  if (!form) return;
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var box = document.getElementById('form-aviso');
+    if (!box) {
+      box = document.createElement('p');
+      box.id = 'form-aviso';
+      box.setAttribute('role','status');
+      box.style.cssText = 'margin:1rem 0 0;padding:.9rem 1rem;border:1px solid rgba(201,162,39,.5);'
+        + 'border-radius:2px;background:rgba(201,162,39,.1);color:#F0D98C;font-size:.9rem;line-height:1.55';
+      form.appendChild(box);
+    }
+    box.textContent = 'Esta é uma versão de revisão da página. O formulário ainda não está ligado '
+      + 'ao destino final, então nada foi enviado. Fale com a escola pelo WhatsApp.';
+    box.scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+})();
+</script>
+
+</body>
+</html>
