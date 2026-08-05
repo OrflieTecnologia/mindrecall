@@ -245,6 +245,7 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
 .price-panel{background:rgba(201,162,39,.09);border-top:1px solid rgba(201,162,39,.4);padding:clamp(1.75rem,4vw,2.75rem);text-align:center}
 .price-kicker{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin:0 0 .6rem}
 .price-big{font-family:var(--f-display);font-weight:600;font-size:clamp(2.6rem,9vw,4.2rem);color:var(--gold);line-height:1;letter-spacing:.01em}
+.price-big.txt{font-size:clamp(1.5rem,4vw,2.3rem);text-transform:uppercase;letter-spacing:.05em;line-height:1.2}
 .price-sub{margin:.9rem 0 0;font-family:var(--f-serif);font-size:clamp(1.02rem,2vw,1.2rem);color:var(--paper)}
 .price-math{
   margin:1.5rem auto 0;max-width:460px;padding-top:1.25rem;
@@ -704,15 +705,16 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         <dt>Uma sessão de terapeuta experiente (valor do Israel hoje)</dt>
         <dd>R$ 500</dd>
       </div>
-      <div class="ledger-row">
-        <dt>A formação completa</dt>
-        <dd>R$ 1.500</dd>
-      </div>
       <div class="ledger-row total">
-        <dt>Sessões para pagar a formação</dt>
-        <dd>4 a 8</dd>
+        <dt>Um dia com quatro atendimentos</dt>
+        <dd>R$ 800 a R$ 1.600</dd>
       </div>
     </dl>
+
+    <p style="margin-top:1.6rem">
+      Falta uma linha nessa conta: o valor da formação. Ele é apresentado na conversa, junto com
+      as condições de parcelamento da turma que você escolher.
+    </p>
 
     <p class="disclaimer">
       Esses são valores praticados no mercado, informados pelos professores da escola.
@@ -850,12 +852,12 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       </div>
 
       <div class="price-panel">
-        <p class="price-kicker">Tudo isso por</p>
-        <div class="price-big">R$ 1.500</div>
+        <p class="price-kicker">O investimento</p>
+        <div class="price-big txt">Apresentado na conversa</div>
         <p class="price-sub">Dá para parcelar.</p>
         <p class="price-math">
-          Um hipnoterapeuta iniciante cobra de R$ 200 a R$ 400 por sessão.<br>
-          <strong style="color:var(--gold-light)">Entre 4 e 8 sessões pagam a sua formação.</strong>
+          O valor vem junto com as condições de parcelamento da turma que você escolher.<br>
+          <strong style="color:var(--gold-light)">Um hipnoterapeuta iniciante cobra de R$ 200 a R$ 400 por sessão.</strong>
         </p>
         <a class="btn btn-gold btn-lg" href="#inscricao">Falar com a escola</a>
         <p style="margin-top:1.1rem;font-size:.86rem;color:var(--steel)">
@@ -990,9 +992,10 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       <details>
         <summary>Quanto custa e como eu pago?</summary>
         <div class="faq-body">
-          <p>A formação completa custa R$ 1.500. Isso inclui as quatro aulas online ao vivo e os dois dias
-          presenciais. Dá para parcelar. As condições exatas são passadas na conversa, porque mudam
-          conforme a data da turma que você escolher.</p>
+          <p>O valor é apresentado na conversa com a escola, junto com as condições de parcelamento —
+          elas mudam conforme a data da turma que você escolher.</p>
+          <p>O que dá para adiantar: é um preço só. As quatro aulas online ao vivo e os dois dias
+          presenciais estão incluídos, e não existe módulo vendido à parte nem taxa de certificado.</p>
         </div>
       </details>
       <details>
