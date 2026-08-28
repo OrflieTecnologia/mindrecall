@@ -292,6 +292,13 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
 .field input::placeholder,.field textarea::placeholder{color:#6C7788}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 .form-note{font-size:.78rem;color:var(--steel);margin:1.1rem 0 0;line-height:1.6}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.form-aviso{
+  margin:1rem 0 0;padding:.9rem 1rem;border:1px solid rgba(201,162,39,.5);border-radius:2px;
+  background:rgba(201,162,39,.1);color:#F0D98C;font-size:.9rem;line-height:1.55;
+}
+.form-aviso-ok{border-color:rgba(120,200,140,.5);background:rgba(120,200,140,.1);color:#BFE8C9}
+.form-aviso-error{border-color:rgba(220,120,120,.5);background:rgba(220,120,120,.1);color:#F0B8B8}
 
 /* ---------- faq ---------- */
 .faq{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
