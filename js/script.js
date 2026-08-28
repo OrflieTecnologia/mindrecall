@@ -13,32 +13,70 @@
   items.forEach(function(el){ io.observe(el); });
 })();
 
-/* Versão de revisão: os formulários ainda não têm destino.
-   Sem isto o envio falharia em silêncio e o lead sumiria.
-   REMOVER este bloco quando o backend/WhatsApp estiver ligado. */
+/* Envio dos formulários. Um form com [data-crm-webhook] posta os dados para o CRM da Orflia
+   e mostra sucesso/erro na própria página. Sem o atributo, cai no aviso de revisão — ainda sem
+   destino definido (ver PENDENTE nos respectivos .html). */
 (function(){
-  var forms = document.querySelectorAll('.form-shell');
-  forms.forEach(function(form){
+  function showAviso(form, text, tone){
+    var box = form.querySelector('.form-aviso');
+    if (!box) {
+      box = document.createElement('p');
+      box.setAttribute('role','status');
+      form.appendChild(box);
+    }
+    box.className = 'form-aviso' + (tone ? ' form-aviso-' + tone : '');
+    box.textContent = text;
+    box.scrollIntoView({ behavior:'smooth', block:'center' });
+  }
+
+  document.querySelectorAll('.form-shell').forEach(function(form){
+    var webhook = form.dataset.crmWebhook;
+
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
-      var box = form.querySelector('.form-aviso');
-      if (!box) {
-        box = document.createElement('p');
-        box.className = 'form-aviso';
-        box.setAttribute('role','status');
-        box.style.cssText = 'margin:1rem 0 0;padding:.9rem 1rem;border:1px solid rgba(201,162,39,.5);'
-          + 'border-radius:2px;background:rgba(201,162,39,.1);color:#F0D98C;font-size:.9rem;line-height:1.55';
-        form.appendChild(box);
-      }
-      box.textContent = 'Esta é uma versão de revisão da página. O formulário ainda não está ligado '
-        + 'ao destino final, então nada foi enviado. Fale com a escola pelo WhatsApp.';
-      box.scrollIntoView({ behavior:'smooth', block:'center' });
 
       // PENDENTE (interno): confirmar com o Rodrigo (tráfego pago) o Pixel ID definitivo
-      // e o nome do evento de conversão. Por ora dispara "Lead" ao preencher qualquer formulário.
-      if (window.fbq) {
-        window.fbq('track', form.dataset.fbqEvent || 'Lead');
+      // e o nome do evento de conversão de cada formulário.
+      var fireLead = function(){
+        if (window.fbq) window.fbq('track', form.dataset.fbqEvent || 'Lead');
+      };
+
+      if (!webhook) {
+        showAviso(form, 'Esta é uma versão de revisão da página. O formulário ainda não está ligado '
+          + 'ao destino final, então nada foi enviado. Fale com a escola pelo WhatsApp.');
+        fireLead();
+        return;
       }
+
+      var data = {};
+      new FormData(form).forEach(function(v, k){ data[k] = v; });
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function(r){ return r.json(); })
+        .then(function(res){
+          if (res && res.ok) {
+            showAviso(form, 'Recebemos seu contato! A equipe da Mind Recall fala com você em breve.', 'ok');
+            form.reset();
+            fireLead();
+          } else {
+            showAviso(form, 'Não conseguimos enviar agora. Tente de novo em instantes ou fale com '
+              + 'a escola pelo WhatsApp.', 'error');
+          }
+        })
+        .catch(function(){
+          showAviso(form, 'Não conseguimos enviar agora. Tente de novo em instantes ou fale com '
+            + 'a escola pelo WhatsApp.', 'error');
+        })
+        .finally(function(){
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   });
 })();

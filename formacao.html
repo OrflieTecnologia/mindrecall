@@ -681,7 +681,8 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_PENDENTE&ev=PageView&noscript=1"
       perder a matrícula a colocar alguém numa turma errada.
     </p>
 
-    <form class="form-shell" novalidate data-fbq-event="Lead">
+    <form class="form-shell" novalidate data-fbq-event="Lead"
+          data-crm-webhook="https://orflia.ai/api/webhooks/formulario/5935b4d3-537b-4fa7-8924-398c54b273cd">
       <div class="field">
         <label for="nome">Nome completo</label>
         <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como você se chama" required>
@@ -748,10 +749,9 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_PENDENTE&ev=PageView&noscript=1"
       </p>
     </form>
 
-    <!-- PENDENTE (interno) — campos finais a fechar com o Rodrigo (tráfego pago) e destino do lead:
-         CRM da Orflia + notificação para a Júlia (closer), mantendo o fluxo de WhatsApp que já roda
-         no tráfego. O formulário ainda não está ligado a nenhum backend — testar ponta a ponta antes
-         de subir campanha. -->
+    <!-- Formulário ligado ao CRM da Orflia (item 1.3). PENDENTE (interno): confirmar com a equipe
+         que o lead está chegando certo no CRM e que a notificação para a Júlia (closer) está
+         disparando, antes de subir campanha paga. -->
   </div>
 </section>
 
