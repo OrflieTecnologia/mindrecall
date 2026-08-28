@@ -4,321 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mind Recall — Formação em Hipnose Clínica</title>
-<meta name="description" content="Aprenda a tratar medo, dor e ansiedade com hipnose. Quatro aulas online ao vivo e dois dias de prática presencial. São Paulo, Salvador, Florianópolis e Curitiba.">
+<meta name="description" content="Aprenda a tratar medo, dor e ansiedade com hipnose. Quatro aulas online ao vivo e dois dias de prática, presencial em São Paulo ou online ao vivo nas demais capitais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --abyss:#04101F;
-  --navy:#0B1B33;
-  --navy-raised:#16294A;
-  --gold:#C9A227;
-  --gold-light:#F0D98C;
-  --steel:#A8AEB8;
-  --paper:#F5F3ED;
-
-  --f-display:'Cinzel',Georgia,serif;
-  --f-serif:'Spectral',Georgia,serif;
-  --f-sans:'IBM Plex Sans',system-ui,sans-serif;
-  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
-
-  --wrap:1120px;
-  --gut:clamp(1.25rem,5vw,3rem);
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--navy);color:var(--paper);
-  font-family:var(--f-sans);font-size:17px;line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-
-.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
-.narrow{max-width:760px}
-
-/* ---------- typography ---------- */
-.eyebrow{
-  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--gold);margin:0 0 1.25rem;
-  display:flex;align-items:center;gap:.85rem;
-}
-.eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(201,162,39,.5),transparent)}
-h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
-.h-display{font-family:var(--f-display);font-weight:600;text-transform:uppercase;letter-spacing:.015em;line-height:1.08}
-.h-serif{
-  font-family:var(--f-serif);font-weight:400;line-height:1.2;
-  font-size:clamp(1.7rem,3.5vw,2.75rem);letter-spacing:-.01em;
-}
-.lead{
-  font-family:var(--f-serif);font-weight:300;
-  font-size:clamp(1.08rem,1.9vw,1.3rem);line-height:1.6;color:#DCD9D0;
-}
-p{margin:0 0 1.1rem}
-.muted{color:var(--steel)}
-
-/* ---------- nav ---------- */
-.nav{
-  position:sticky;top:0;z-index:60;background:rgba(11,27,51,.9);
-  backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,162,39,.2);
-}
-.nav-in{
-  max-width:var(--wrap);margin:0 auto;padding:.8rem var(--gut);
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;
-}
-.wordmark{text-decoration:none;line-height:1.1}
-.wordmark b{display:block;font-family:var(--f-display);font-weight:600;font-size:1rem;letter-spacing:.14em;color:var(--gold-light)}
-.wordmark span{display:block;font-family:var(--f-mono);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:2px}
-
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
-  font-family:var(--f-sans);font-weight:600;font-size:.94rem;
-  padding:.85rem 1.6rem;border-radius:2px;text-decoration:none;
-  border:1px solid transparent;cursor:pointer;
-  transition:background .2s ease,color .2s ease,border-color .2s ease;
-}
-.btn-gold{background:var(--gold);color:#14130A}
-.btn-gold:hover{background:var(--gold-light)}
-.btn-ghost{border-color:rgba(201,162,39,.45);color:var(--gold-light)}
-.btn-ghost:hover{border-color:var(--gold);background:rgba(201,162,39,.1)}
-.btn-sm{padding:.58rem 1.1rem;font-size:.84rem}
-.btn-lg{padding:1.05rem 2.2rem;font-size:1.02rem}
-.cta-row{display:flex;flex-wrap:wrap;gap:.85rem}
-.hero .cta-row{justify-content:center}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
-  outline:2px solid var(--gold-light);outline-offset:3px;
-}
-
-/* faixa de CTA repetida */
-.cta-band{
-  border-top:1px solid rgba(201,162,39,.28);
-  border-bottom:1px solid rgba(201,162,39,.28);
-  background:rgba(201,162,39,.06);
-  padding:clamp(1.5rem,3vw,2rem);margin-top:clamp(2.5rem,5vw,3.5rem);
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem;
-}
-.cta-band p{margin:0;font-family:var(--f-serif);font-size:clamp(1.05rem,2vw,1.28rem);color:var(--paper)}
-.cta-band small{display:block;font-family:var(--f-sans);font-size:.84rem;color:var(--steel);margin-top:.3rem}
-
-/* ---------- sections ---------- */
-section{padding-block:clamp(4rem,8vw,6.5rem)}
-.sec-abyss{background:var(--abyss)}
-.sec-raised{background:var(--navy-raised)}
-
-/* ---------- hero ---------- */
-.hero{
-  position:relative;overflow:hidden;text-align:center;
-  padding-block:clamp(2.75rem,6vw,4.5rem) clamp(3.5rem,7vw,5rem);
-  background:radial-gradient(120% 90% at 50% -10%,#12244180 0%,transparent 60%),var(--navy);
-}
-.seal{
-  width:clamp(96px,14vw,132px);aspect-ratio:1;margin:0 auto clamp(1.5rem,3vw,2.25rem);
-  border-radius:50%;
-  background-image:url('assets/logo-navy.png');
-  background-size:267%;background-position:50% 39%;
-  -webkit-mask-image:radial-gradient(circle,#000 58%,transparent 76%);
-  mask-image:radial-gradient(circle,#000 58%,transparent 76%);
-}
-.hero .eyebrow{justify-content:center}
-.hero .eyebrow::after{display:none}
-.hero .eyebrow::before{content:"";flex:0 0 34px;height:1px;background:rgba(201,162,39,.6)}
-.hero h1{font-size:clamp(1.95rem,6vw,4.1rem);margin-bottom:1.5rem}
-.hero h1 .line{display:block}
-.hero h1 .accent{color:var(--gold)}
-.hero .lead{max-width:620px;margin:0 auto 2.1rem}
-
-.promise{
-  max-width:640px;margin:0 auto 2.2rem;
-  border-top:1px solid rgba(201,162,39,.32);border-bottom:1px solid rgba(201,162,39,.32);
-  padding:1.4rem 1.25rem;
-  font-family:var(--f-serif);font-size:clamp(1.12rem,2.2vw,1.42rem);line-height:1.5;
-}
-.promise em{font-style:normal;color:var(--gold-light)}
-
-.factrail{
-  margin-top:clamp(2.75rem,5vw,4rem);border-top:1px solid rgba(255,255,255,.1);
-  padding-top:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
-}
-.factrail div{text-align:center}
-.factrail b{display:block;font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,3vw,1.85rem);color:var(--gold-light);line-height:1}
-.factrail span{display:block;margin-top:.5rem;font-family:var(--f-mono);font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
-
-/* ---------- tese ---------- */
-.negation{
-  font-family:var(--f-serif);font-style:italic;font-weight:300;
-  font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--steel);
-  border-left:2px solid var(--gold);padding-left:1.4rem;margin:0 0 2rem;
-}
-
-/* ---------- método ---------- */
-.method{background:linear-gradient(180deg,var(--navy-raised) 0%,var(--navy) 42%,var(--abyss) 100%)}
-.stages{margin-top:clamp(2.5rem,5vw,3.5rem)}
-.stage{
-  position:relative;padding:0 0 clamp(2rem,4vw,3rem) clamp(2.25rem,5vw,3.5rem);
-  border-left:1px solid rgba(201,162,39,.28);
-}
-.stage:last-child{border-left-color:transparent;padding-bottom:0}
-.stage::before{
-  content:"";position:absolute;left:-4.5px;top:.6rem;width:8px;height:8px;border-radius:50%;
-  background:var(--gold);box-shadow:0 0 0 4px var(--navy);
-}
-.stage:last-child::before{
-  width:12px;height:12px;left:-6.5px;background:var(--gold-light);
-  box-shadow:0 0 0 5px var(--abyss),0 0 22px rgba(240,217,140,.55);
-}
-.stage-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.55rem 1rem;margin-bottom:.65rem}
-.stage-num{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;color:var(--gold)}
-.stage-name{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:clamp(.98rem,2.1vw,1.28rem);letter-spacing:.04em}
-.tag{
-  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
-  border:1px solid rgba(168,174,184,.4);color:var(--steel);padding:.24rem .55rem;border-radius:2px;white-space:nowrap;
-}
-.tag-live{border-color:rgba(201,162,39,.55);color:var(--gold-light)}
-.stage p{margin:0;color:#CFCCC4;max-width:60ch}
-.stage-who{display:block;margin-top:.6rem;font-family:var(--f-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-
-/* ---------- cards ---------- */
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2.5vw,1.75rem);margin-top:2.5rem}
-.card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:3px;padding:clamp(1.4rem,2.6vw,1.9rem)}
-.card h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:1rem;letter-spacing:.05em;color:var(--gold-light);margin-bottom:.5rem}
-.card p:last-child{margin-bottom:0}
-
-/* ---------- professores ---------- */
-.teacher{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
-.teacher-photo{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
-.teacher-body{padding:clamp(1.3rem,2.5vw,1.75rem)}
-.teacher-body h3{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:1.02rem;letter-spacing:.05em;color:var(--gold-light);margin-bottom:.35rem}
-.teacher-role{font-family:var(--f-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin:0 0 1rem}
-.creds{list-style:none;margin:1.1rem 0 0;padding:0;border-top:1px solid rgba(255,255,255,.1)}
-.creds li{position:relative;padding:.55rem 0 .55rem 1.15rem;font-size:.88rem;color:#CFCCC4;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5}
-.creds li::before{content:"—";position:absolute;left:0;color:var(--gold)}
-
-/* ---------- fotos / galeria ---------- */
-.figure{border:1px solid rgba(201,162,39,.3);border-radius:3px;overflow:hidden;background:var(--abyss)}
-.figure img{width:100%;height:100%;object-fit:cover}
-.figure figcaption{padding:.8rem 1rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);border-top:1px solid rgba(255,255,255,.1)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.75rem,2vw,1.25rem);margin-top:2.5rem}
-.gallery .figure img{aspect-ratio:3/4}
-
-/* ---------- depoimentos em vídeo ---------- */
-.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.85rem,2vw,1.5rem);margin-top:2.5rem}
-.vcard{border:1px solid rgba(201,162,39,.3);border-radius:3px;overflow:hidden;background:var(--abyss);margin:0}
-.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
-.vcard figcaption{padding:.85rem 1rem;border-top:1px solid rgba(255,255,255,.1)}
-.vcard b{display:block;font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:.86rem;letter-spacing:.05em;color:var(--gold-light)}
-.vcard span{display:block;margin-top:.25rem;font-family:var(--f-mono);font-size:.61rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-
-/* ---------- a conta ---------- */
-.ledger{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
-.ledger-row{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.ledger-row dt{color:#CFCCC4;margin:0}
-.ledger-row dd{margin:0;font-family:var(--f-mono);font-size:clamp(1rem,2.2vw,1.25rem);color:var(--gold-light);white-space:nowrap}
-.ledger-row.total dt{color:var(--paper);font-weight:600}
-.ledger-row.total dd{color:var(--gold);font-size:clamp(1.15rem,2.6vw,1.45rem)}
-.disclaimer{margin-top:1.5rem;font-size:.82rem;line-height:1.6;color:var(--steel)}
-
-/* ---------- filtro ---------- */
-.filter-item{padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:auto 1fr;gap:1.3rem;align-items:start}
-.filter-item:last-child{border-bottom:none}
-.filter-x{font-family:var(--f-mono);color:var(--gold);font-size:1.1rem;line-height:1.6}
-.filter-item h3{font-family:var(--f-serif);font-size:1.18rem;font-weight:600;margin-bottom:.35rem}
-.filter-item p{margin:0;color:#CFCCC4}
-
-/* ---------- capitais ---------- */
-.cities{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:2.5rem;background:rgba(255,255,255,.12)}
-.city{background:var(--navy);padding:1.4rem 1.2rem}
-.city b{display:block;font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:.98rem;letter-spacing:.05em;color:var(--gold-light)}
-.city span{display:block;margin-top:.4rem;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-
-/* ---------- tudo que está incluso ---------- */
-.includes{border:1px solid rgba(201,162,39,.4);border-radius:4px;overflow:hidden;margin-top:clamp(2.5rem,5vw,3.25rem)}
-.inc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:rgba(201,162,39,.16)}
-.inc{background:var(--navy);padding:1.35rem clamp(1.1rem,2.5vw,1.6rem);display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start}
-.inc-check{color:var(--gold);font-family:var(--f-mono);font-size:.95rem;line-height:1.55}
-.inc b{display:block;font-weight:600;font-size:.98rem;color:var(--paper);line-height:1.45}
-.inc span{display:block;margin-top:.2rem;font-size:.87rem;color:var(--steel);line-height:1.5}
-
-.price-panel{background:rgba(201,162,39,.09);border-top:1px solid rgba(201,162,39,.4);padding:clamp(1.75rem,4vw,2.75rem);text-align:center}
-.price-kicker{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin:0 0 .6rem}
-.price-big{font-family:var(--f-display);font-weight:600;font-size:clamp(2.6rem,9vw,4.2rem);color:var(--gold);line-height:1;letter-spacing:.01em}
-.price-big.txt{font-size:clamp(1.5rem,4vw,2.3rem);text-transform:uppercase;letter-spacing:.05em;line-height:1.2}
-.price-sub{margin:.9rem 0 0;font-family:var(--f-serif);font-size:clamp(1.02rem,2vw,1.2rem);color:var(--paper)}
-.price-math{
-  margin:1.5rem auto 0;max-width:460px;padding-top:1.25rem;
-  border-top:1px solid rgba(201,162,39,.3);font-size:.92rem;color:var(--steel);line-height:1.6;
-}
-.price-panel .btn{margin-top:1.75rem}
-
-/* ---------- form ---------- */
-.form-shell{margin-top:2.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.28);border-radius:3px;padding:clamp(1.5rem,3.5vw,2.5rem)}
-.field{margin-bottom:1.1rem}
-.field label{display:block;font-family:var(--f-mono);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:.5rem}
-.field input,.field select,.field textarea{
-  width:100%;background:var(--abyss);color:var(--paper);
-  border:1px solid rgba(255,255,255,.16);border-radius:2px;
-  padding:.8rem .9rem;font-family:var(--f-sans);font-size:.98rem;
-}
-.field input::placeholder,.field textarea::placeholder{color:#6C7788}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.form-note{font-size:.78rem;color:var(--steel);margin:1.1rem 0 0;line-height:1.6}
-
-/* ---------- faq ---------- */
-.faq{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12)}
-.faq details{border-bottom:1px solid rgba(255,255,255,.12)}
-.faq summary{cursor:pointer;list-style:none;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--f-serif);font-size:clamp(1.02rem,2vw,1.15rem)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:.4rem;top:1.1rem;font-family:var(--f-mono);color:var(--gold);font-size:1.15rem;transition:transform .2s ease}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq-body{padding:0 2.5rem 1.35rem 0;color:#CFCCC4}
-.faq-body p:last-child{margin-bottom:0}
-
-/* ---------- pendências ---------- */
-.pending{
-  border:1px dashed rgba(201,162,39,.5);background:rgba(201,162,39,.05);
-  border-radius:3px;padding:1rem 1.15rem;
-  font-family:var(--f-mono);font-size:.72rem;line-height:1.6;letter-spacing:.03em;color:var(--gold-light);
-}
-
-/* ---------- footer ---------- */
-.foot{background:var(--abyss);border-top:1px solid rgba(201,162,39,.22);padding-block:3rem 2.5rem}
-.foot-in{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
-.foot small{display:block;font-size:.78rem;color:var(--steel);line-height:1.7}
-
-/* ---------- motion ---------- */
-.rise{opacity:0;transform:translateY(18px)}
-.rise.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
-.hero h1 .line{opacity:0;transform:translateY(14px);animation:heroline .75s cubic-bezier(.2,.7,.3,1) forwards}
-.hero h1 .line:nth-child(2){animation-delay:.3s}
-@keyframes heroline{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .rise,.hero h1 .line{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:900px){
-  .cities{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns:1fr 1fr}
-}
-@media (max-width:720px){
-  body{font-size:16px}
-  .grid-2{grid-template-columns:1fr}
-  .factrail{grid-template-columns:repeat(2,1fr);gap:1.5rem 1rem}
-  .field-row{grid-template-columns:1fr}
-  .nav .btn{display:none}
-  .ledger-row{flex-direction:column;gap:.3rem}
-  .filter-item{grid-template-columns:1fr;gap:.5rem}
-  .inc-list{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr}
-  .videos{grid-template-columns:1fr;max-width:340px;margin-inline:auto}
-  .cta-band{flex-direction:column;align-items:stretch;text-align:center}
-  .cta-band .btn{width:100%}
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -346,7 +36,8 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
     </p>
 
     <p class="promise">
-      Atenda seu primeiro paciente em <em>30 dias</em>.<br>
+      Ao terminar os dois dias de prática — <em>presencial ou online</em> — você já está apto
+      a marcar seu primeiro atendimento.<br>
       Sem faculdade de psicologia. Sem largar o que você já faz.
     </p>
 
@@ -403,8 +94,9 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       com um professor olhando.
     </p>
     <p>
-      Aqui é diferente. A teoria é ao vivo, e você pode perguntar na hora. A prática é presencial,
-      e não existe versão gravada dela.
+      Aqui é diferente. A teoria é ao vivo, e você pode perguntar na hora. A prática também é ao vivo —
+      presencial, no formato recomendado, ou online com transmissão ao vivo, para quem não está
+      na capital com turma presencial.
     </p>
     <p style="margin-bottom:0">
       E quem ensina, atende. É regra da escola: todo professor tem consultório ativo.
@@ -419,8 +111,9 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       <p class="eyebrow">Como funciona</p>
       <h2 class="h-serif">Seis encontros. Da teoria ao consultório.</h2>
       <p class="lead" style="margin-top:1.3rem">
-        Quatro aulas online ao vivo, às terças e quintas. Depois, dois dias de prática presencial.
-        A ordem é pensada: primeiro você entende, depois você faz.
+        Quatro aulas online ao vivo, às terças e quintas. Depois, dois dias de prática — presencial
+        em São Paulo ou online, ao vivo, nas demais capitais. A ordem é pensada: primeiro você
+        entende, depois você faz.
       </p>
     </div>
 
@@ -481,14 +174,15 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         <div class="stage-head">
           <span class="stage-num">05—06</span>
           <h3 class="stage-name">A prática de verdade</h3>
-          <span class="tag">Presencial · 2 dias · 9h às 17h30</span>
+          <span class="tag">Presencial ou online · 2 dias · 9h às 17h</span>
         </div>
         <p>
           Você hipnotiza. E é hipnotizado. São dois dias de prática com âncoras, scripts de tratamento
-          e regressão, com os professores e monitores acompanhando na sala.
-          É aqui que a formação deixa de ser teoria. E é por isso que não existe versão gravada.
+          e regressão, com os professores e monitores acompanhando ao vivo — presencialmente em
+          São Paulo ou online, com transmissão ao vivo, nas demais capitais.
+          É aqui que a formação deixa de ser teoria.
         </p>
-        <span class="stage-who">Israel Costa e Dr. William · na sua capital</span>
+        <span class="stage-who">Israel Costa e Dr. William · presencial em São Paulo ou online</span>
       </div>
     </div>
 
@@ -677,12 +371,11 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       <a class="btn btn-gold" href="#inscricao">Falar com a escola</a>
     </div>
 
-    <div class="pending rise" style="margin-top:1.5rem">
-      [CONFIRMAR COM O CLIENTE — 2 pontos: (1) profissão e cidade de cada um (hoje só temos o
-      primeiro nome; "Aline, dentista, Salvador" converte muito mais que "Aline"). (2) autorização
-      de uso de imagem dos três para peça pública. RECOMENDAÇÃO: legenda queimada no vídeo —
-      tráfego de rede social assiste sem som, e sem legenda o depoimento não comunica nada.]
-    </div>
+    <!-- PENDENTE (interno) — confirmar com o cliente: (1) profissão e cidade de cada aluno (hoje só
+         temos o primeiro nome; "Aline, dentista, Salvador" converte muito mais que "Aline").
+         (2) autorização de uso de imagem dos três para peça pública. RECOMENDAÇÃO: legenda queimada
+         no vídeo — tráfego de rede social assiste sem som, e sem legenda o depoimento não comunica
+         nada. -->
   </div>
 </section>
 
@@ -702,9 +395,11 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         <dd>R$ 200 a R$ 400</dd>
       </div>
       <div class="ledger-row">
-        <dt>Uma sessão de terapeuta experiente (valor do Israel hoje)</dt>
+        <dt>Uma sessão de terapeuta experiente</dt>
         <dd>R$ 500</dd>
       </div>
+      <!-- PENDENTE (interno) — valor de referência informado pelo Israel; ele sinalizou reajuste
+           em outubro/2026. Revisar este número nessa data. -->
       <div class="ledger-row total">
         <dt>Um dia com quatro atendimentos</dt>
         <dd>R$ 800 a R$ 1.600</dd>
@@ -739,7 +434,7 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
     <p class="eyebrow">O filtro</p>
     <h2 class="h-serif">Três pessoas que não deveriam se inscrever.</h2>
     <p style="margin-top:1.3rem;margin-bottom:1.75rem">
-      A turma presencial tem lugar limitado e a prática exige presença.
+      A turma presencial tem lugar limitado e a prática exige participação ao vivo.
       Preferimos dizer isso agora do que devolver dinheiro depois.
     </p>
 
@@ -755,9 +450,10 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
     <div class="filter-item">
       <span class="filter-x" aria-hidden="true">✕</span>
       <div>
-        <h3>Quem não pode estar nos dois dias presenciais.</h3>
-        <p>A prática não tem vídeo e não tem reposição. Sem os dois dias não sai certificado.
-        E, sendo honesto, também não sai formação.</p>
+        <h3>Quem só quer assistir depois, sem participar ao vivo.</h3>
+        <p>A gravação existe para você rever — ela não substitui a prática. Você precisa estar ao vivo
+        nos dois dias, presencial ou online, porque hipnotiza e é hipnotizado com outra pessoa de
+        verdade. Sem isso, sai o vídeo. Não sai a habilidade.</p>
       </div>
     </div>
 
@@ -777,22 +473,22 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
   <div class="wrap">
     <div class="narrow rise">
       <p class="eyebrow">Onde acontece</p>
-      <h2 class="h-serif">A teoria é de qualquer lugar.<br>A prática é na sua capital.</h2>
+      <h2 class="h-serif">A teoria é de qualquer lugar.<br>A prática, prioritariamente em São Paulo.</h2>
       <p style="margin-top:1.3rem">
         As quatro aulas online juntam alunos do Brasil inteiro.
-        O fim de semana presencial acontece na capital que você escolher.
+        A prática presencial está concentrada em São Paulo. Nas demais capitais, ela acontece
+        online, com transmissão ao vivo.
       </p>
     </div>
     <div class="cities rise">
-      <div class="city"><b>São Paulo</b><span>Próxima turma · [data]</span></div>
-      <div class="city"><b>Salvador</b><span>Próxima turma · [data]</span></div>
-      <div class="city"><b>Florianópolis</b><span>Próxima turma · [data]</span></div>
-      <div class="city"><b>Curitiba</b><span>Próxima turma · [data]</span></div>
+      <div class="city city-featured"><b>São Paulo</b><span>Presencial · Próxima turma · [data]</span></div>
+      <div class="city"><b>Salvador</b><span>Turma online · lista de espera</span></div>
+      <div class="city"><b>Florianópolis</b><span>Turma online · lista de espera</span></div>
+      <div class="city"><b>Curitiba</b><span>Turma online · lista de espera</span></div>
     </div>
-    <div class="pending rise" style="margin-top:1.5rem">
-      [PENDENTE — datas reais das próximas turmas por capital. Sem data confirmada, não usar
-      contagem regressiva nem "últimas vagas": urgência falsa queima a autoridade da página.]
-    </div>
+    <!-- PENDENTE (interno) — data real da próxima turma presencial em São Paulo. Sem data
+         confirmada, não usar contagem regressiva nem "últimas vagas": urgência falsa queima
+         a autoridade da página. -->
   </div>
 </section>
 
@@ -815,7 +511,7 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         </div>
         <div class="inc">
           <span class="inc-check" aria-hidden="true">✓</span>
-          <div><b>2 dias de prática presencial</b><span>Das 9h às 17h30, na capital que você escolher.</span></div>
+          <div><b>2 dias de prática, presencial ou online</b><span>Das 9h às 17h. Presencial em São Paulo, ou online com transmissão ao vivo nas demais capitais.</span></div>
         </div>
         <div class="inc">
           <span class="inc-check" aria-hidden="true">✓</span>
@@ -835,7 +531,7 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         </div>
         <div class="inc">
           <span class="inc-check" aria-hidden="true">✓</span>
-          <div><b>Certificado em hipnose clínica</b><span>Entregue quando você termina os dois dias presenciais.</span></div>
+          <div><b>Certificado em hipnose clínica</b><span>Entregue quando você termina os dois dias de prática, presencial ou online.</span></div>
         </div>
         <div class="inc">
           <span class="inc-check" aria-hidden="true">✓</span>
@@ -866,12 +562,11 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       </div>
     </div>
 
-    <div class="pending rise" style="margin-top:1.5rem">
-      [CONFIRMAR COM O CLIENTE — 2 itens: (1) "refazer as aulas online nas turmas seguintes" foi
-      descrito pelo Israel como prática ("tem aluno que refaz sempre"), mas não como política oficial;
-      ficou fora da lista até virar regra. (2) condições de parcelamento (cartão em até 12x com juros,
-      Pix parcelado via Cacto) — colocar o número exato de parcelas quando a plataforma estiver fechada.]
-    </div>
+    <!-- PENDENTE (interno) — confirmar com o cliente: (1) "refazer as aulas online nas turmas
+         seguintes" foi descrito pelo Israel como prática ("tem aluno que refaz sempre"), mas não
+         como política oficial; ficou fora da lista até virar regra. (2) condições de parcelamento
+         (cartão em até 12x com juros, Pix parcelado via Cacto) — colocar o número exato de parcelas
+         quando a plataforma estiver fechada. -->
   </div>
 </section>
 
@@ -908,14 +603,14 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
 
       <div class="field-row">
         <div class="field">
-          <label for="capital">Capital para o presencial</label>
+          <label for="capital">Sua cidade</label>
           <select id="capital" name="capital" required>
             <option value="">Selecione…</option>
-            <option>São Paulo</option>
-            <option>Salvador</option>
-            <option>Florianópolis</option>
-            <option>Curitiba</option>
-            <option>Ainda não é atendida</option>
+            <option>São Paulo — presencial</option>
+            <option>Salvador — turma online</option>
+            <option>Florianópolis — turma online</option>
+            <option>Curitiba — turma online</option>
+            <option>Outra cidade — turma online</option>
           </select>
         </div>
         <div class="field">
@@ -943,10 +638,10 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       </p>
     </form>
 
-    <div class="pending" style="margin-top:1.5rem">
-      [PENDENTE — campos finais a fechar com o Rodrigo (tráfego pago) e destino do lead:
-      CRM, planilha ou WhatsApp. O formulário ainda não está ligado a nenhum backend.]
-    </div>
+    <!-- PENDENTE (interno) — campos finais a fechar com o Rodrigo (tráfego pago) e destino do lead:
+         CRM da Orflia + notificação para a Júlia (closer), mantendo o fluxo de WhatsApp que já roda
+         no tráfego. O formulário ainda não está ligado a nenhum backend — testar ponta a ponta antes
+         de subir campanha. -->
   </div>
 </section>
 
@@ -976,17 +671,17 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
       <details>
         <summary>E se eu não conseguir hipnotizar ninguém?</summary>
         <div class="faq-body">
-          <p>Os dois dias presenciais são de prática. Você hipnotiza e é hipnotizado, com os professores
-          e monitores acompanhando na sala. Ninguém termina a formação sem ter conduzido uma sessão
-          do começo ao fim.</p>
+          <p>Os dois dias de prática — presencial ou online — são para isso. Você hipnotiza e é
+          hipnotizado, com os professores e monitores acompanhando ao vivo. Ninguém termina a
+          formação sem ter conduzido uma sessão do começo ao fim.</p>
         </div>
       </details>
       <details>
         <summary>Em quanto tempo eu posso começar a atender?</summary>
         <div class="faq-body">
           <p>A escola não promete prazo de retorno nem faturamento, porque isso depende de cada aluno.
-          O que ela garante é o seguinte: quando você termina o fim de semana presencial, já está apto
-          a marcar o primeiro atendimento. O que vem depois é trabalho seu.</p>
+          O que ela garante é o seguinte: quando você termina o fim de semana de prática — presencial
+          ou online — já está apto a marcar o primeiro atendimento. O que vem depois é trabalho seu.</p>
         </div>
       </details>
       <details>
@@ -994,16 +689,18 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
         <div class="faq-body">
           <p>O valor é apresentado na conversa com a escola, junto com as condições de parcelamento —
           elas mudam conforme a data da turma que você escolher.</p>
-          <p>O que dá para adiantar: é um preço só. As quatro aulas online ao vivo e os dois dias
-          presenciais estão incluídos, e não existe módulo vendido à parte nem taxa de certificado.</p>
+          <p>O que dá para adiantar: é um preço só. As quatro aulas online ao vivo e os dois dias de
+          prática — presencial ou online — estão incluídos, e não existe módulo vendido à parte nem
+          taxa de certificado.</p>
         </div>
       </details>
       <details>
-        <summary>Não moro em nenhuma dessas quatro capitais.</summary>
+        <summary>Não moro em São Paulo, Salvador, Florianópolis ou Curitiba.</summary>
         <div class="faq-body">
-          <p>As aulas online recebem alunos do Brasil inteiro. O que limita é o fim de semana presencial.
-          A escola está abrindo novas capitais e forma professores locais em cada uma. Vale marcar a
-          conversa e perguntar qual é a próxima. Muitos alunos também vêm de cidades vizinhas.</p>
+          <p>Sem problema. As quatro aulas teóricas já são online e recebem alunos do Brasil inteiro.
+          A prática está concentrada em São Paulo — quem não está por perto faz a prática online, com
+          transmissão ao vivo, e desconto de R$ 500 sobre o valor do presencial. Vale marcar a
+          conversa para saber os próximos horários.</p>
         </div>
       </details>
     </div>
@@ -1034,45 +731,7 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
   </div>
 </footer>
 
-<script>
-(function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.rise');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  items.forEach(function(el){ io.observe(el); });
-})();
-
-/* Versão de revisão: o formulário ainda não tem destino.
-   Sem isto o envio falharia em silêncio e o lead sumiria.
-   REMOVER este bloco quando o backend/WhatsApp estiver ligado. */
-(function(){
-  var form = document.querySelector('.form-shell');
-  if (!form) return;
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var box = document.getElementById('form-aviso');
-    if (!box) {
-      box = document.createElement('p');
-      box.id = 'form-aviso';
-      box.setAttribute('role','status');
-      box.style.cssText = 'margin:1rem 0 0;padding:.9rem 1rem;border:1px solid rgba(201,162,39,.5);'
-        + 'border-radius:2px;background:rgba(201,162,39,.1);color:#F0D98C;font-size:.9rem;line-height:1.55';
-      form.appendChild(box);
-    }
-    box.textContent = 'Esta é uma versão de revisão da página. O formulário ainda não está ligado '
-      + 'ao destino final, então nada foi enviado. Fale com a escola pelo WhatsApp.';
-    box.scrollIntoView({ behavior:'smooth', block:'center' });
-  });
-})();
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
